@@ -36,5 +36,29 @@ $nameStartsWithS = array_filter($persons, 'filterByS');
 print_r($nameStartsWithS);
 
 
+//array_reduce() Iteratively reduce the array to a single value using a callback function
+$numbers = array(1,2,3,4,5,6,7,8,9,10);
+function sum($oldValue, $newValue){
+    return $oldValue + $newValue;
+}
+function sumEven($carry, $item){
+    if($item % 2 == 0){
+        return $carry + $item;
+    }
+    return $carry;
+}
+function sumOdd($carry, $item){
+    if($item % 2 == 1){
+        return $carry + $item;
+    }
+    return $carry;
+}
+
+$sum = array_reduce($numbers, 'sum');
+$sumEven = array_reduce($numbers, 'sumEven');
+$sumOdd = array_reduce($numbers, 'sumOdd');
+echo "Total Sum " . $sum . "\n";
+echo "Even Sum " . $sumEven . "\n";
+echo "Odd Sum " . $sumOdd . "\n";
 
 ?>
