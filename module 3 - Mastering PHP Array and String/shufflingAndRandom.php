@@ -9,47 +9,7 @@ print_r($nunber);
 
 $fruits = array('a' => 'apple', 'b' => 'banana', 'c' => 'cherry', 'd' => 'dates');
 shuffle($fruits); //remove keys 
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print_r($fruits);
+//print_r($fruits);
 
 $fruits = array('a' => 'apple', 'b' => 'banana', 'c' => 'cherry', 'd' => 'dates');
 $key = array_rand($fruits); //return a random key from associative array
