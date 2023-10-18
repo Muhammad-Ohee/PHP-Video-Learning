@@ -9,12 +9,18 @@ function sqr($number){
 }
 array_walk($numbers, 'sqr');
 
+
+
+
 //array_map() ---- will return something
 function cube($number){
     return $number * $number * $number;
 }
 $cube_array = array_map('cube', $numbers);
 print_r($cube_array);
+
+
+
 
 //array_filter() ----- will return (true or false)
 function even($number){
@@ -34,6 +40,8 @@ function filterByS($name){
 }
 $nameStartsWithS = array_filter($persons, 'filterByS');
 print_r($nameStartsWithS);
+
+
 
 
 //array_reduce() Iteratively reduce the array to a single value using a callback function
